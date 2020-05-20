@@ -12,11 +12,11 @@ func addconstandvar(){
 	const d int=2
 	var b int=8
 	fmt.Printf("\n%v %T", b+d,b+d)//we can add var and const and result will be var
-}
+}//we can perform implicit type conversion using constants, it is not possible in variables. We can do this by using UNTYPED Constants
 func adddiffinttypes(){
 //	const d int=2
 //	var b int32=8
-	//fmt.Printf("\n%v %T", b+d,b+d)//this will give error. cant add different types. no concept of implicit type conversion. always explicit
+	//fmt.Printf("\n%v %T", b+d,b+d)//this will give error. cant add different types.
 }
 
 func main(){
