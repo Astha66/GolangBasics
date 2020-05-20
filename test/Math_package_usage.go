@@ -2,7 +2,7 @@ package main
 import(
 	"fmt"
 	"math"
-)
+)// this is how we import multiple packages in go
 func main(){
 	var num float64= 9
 	var num1 float64 = 12
