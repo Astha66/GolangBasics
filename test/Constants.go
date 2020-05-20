@@ -3,7 +3,17 @@ package main
 import "fmt"
 
 const a int8=10
-
+//enumerated constants
+const (
+	p = iota
+	q
+	r
+)
+func enumerated(){
+	fmt.Println(p)//prints 0
+	fmt.Println(q)//prints 1
+	fmt.Println(r)//prints 2
+}
 func constshadowing(){
 	const a int32 = 70//even though a is a package level constant, we can change its value using the concept of shadowing
 	fmt.Printf("\n%v %T",a,a)
@@ -12,11 +22,11 @@ func addconstandvar(){
 	const d int=2
 	var b int=8
 	fmt.Printf("\n%v %T", b+d,b+d)//we can add var and const and result will be var
-}//we can perform implicit type conversion using constants, it is not possible in variables. We can do this by using UNTYPED Constants
+}
 func adddiffinttypes(){
 //	const d int=2
 //	var b int32=8
-	//fmt.Printf("\n%v %T", b+d,b+d)//this will give error. cant add different types.
+	//fmt.Printf("\n%v %T", b+d,b+d)//this will give error. cant add different types. no concept of implicit type conversion. always explicit
 }
 
 func main(){
@@ -32,4 +42,5 @@ func main(){
 	constshadowing()
 	addconstandvar()
 	adddiffinttypes()
+	enumerated()
 }
